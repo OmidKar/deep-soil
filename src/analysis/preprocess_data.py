@@ -25,9 +25,9 @@ def logTransformVariable(df, col, tol = 0.5):
     print("result flag is False")
     return False
 
-def transformNumericVars(data, cols, tol = 0.5, removeCols = False):
+def transformNumericVars(data, cols, tol = 0.5, removeOtherCols = False):
     logFlagDict = {}
-    if removeCols:
+    if removeOtherCols:
         df = data[cols].copy(deep=True)
     else:
         df = data.copy(deep=True)
@@ -44,7 +44,7 @@ def prepareTrainAndTest(data, predictors):
     
     return (XDict, yDict)
 
-def standardSaleData(X_train, X_test, y_train):
+def standardScaleData(X_train, X_test, y_train):
     sc_y = {}
     for key in X_train.keys():
         sc_X = StandardScaler()

@@ -29,7 +29,14 @@ def readAndCleanData(dataPath, datafile):
     dataset['AB'] = dataset.apply(lambda x: (math.pi)*(x['cu']+0.01*x['e'])*x['d']*3./4., axis=1)
     return dataset
 
-def obtainTrainAndTestData(dataset, dataPath, firstTime = False):
+def obtainTrainAndTestData(dataset, dataPath, firstTime = False, transFlag = False):
+    if transFlag:
+        trainName = "train_trans.csv"
+        testName = "test_trans.csv"
+    else:
+        trainName = "train_data.csv"
+        testName = "test_data.csv"
+        
     if firstTime:
         targetCols = ['e', 'cu', 'lambda', 'AB']
         trainDf = pd.DataFrame()
@@ -38,10 +45,10 @@ def obtainTrainAndTestData(dataset, dataPath, firstTime = False):
                 filteredData = dataset[dataset[col] == val]
                 trainDf = trainDf.append(filteredData.loc[np.random.choice(filteredData.index, 11), :])
     
-        trainDf.to_csv(dataPath+"train_trans.csv", index=False)
+        trainDf.to_csv(dataPath+trainName, index=False)
         testDf = pd.concat([dataset, trainDf]).drop_duplicates(keep=False)
-        testDf.to_csv(dataPath+"test_trans.csv", index=False)
+        testDf.to_csv(dataPath+testName, index=False)
     else:
-        trainDf = pd.read_csv(dataPath+"train_trans.csv")
-        testDf = pd.read_csv(dataPath+"test_trans.csv")
+        trainDf = pd.read_csv(dataPath+trainName)
+        testDf = pd.read_csv(dataPath+testName)
     return [trainDf, testDf]
