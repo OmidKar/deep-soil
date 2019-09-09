@@ -23,8 +23,7 @@ dataset = read_data.readAndCleanData(dataPath, datafile)
 predictors = {'cu': ['m', 'v', 'd', 'tt', 'tp', 'ike'],
               'AB': ['m', 'v', 'd', 'tt', 'tp', 'ike'],
               'e': ['m', 'v', 'd', 'tt', 'tp', 'ike'], 
-              'lambda': ['m', 'v', 'd', 'tt', 'tp', 'ike'], 
-              'e/cu': ['m', 'v', 'd', 'tt', 'tp', 'ike']}
+              'lambda': ['m', 'v', 'd', 'tt', 'tp', 'ike']}
 
 (X_trainDict, y_trainDict) = preprocess_data.prepareTrainAndTest(trainDf, predictors)
 (X_testDict, y_testDict) = preprocess_data.prepareTrainAndTest(testDf, predictors)
