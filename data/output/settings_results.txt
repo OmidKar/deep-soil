@@ -1,31 +1,4 @@
 Original Flags are: pca flag = True and XGB flag = True.
-Runing the analysis for cu ...
-Best PCA params are: 
-{'comp': 6, 'kernel': 'poly', 'deg': 5, 'gamma': 0.09, 'coef': 2}Best result achieved is: 
-['XGB', 0.9098452218436688]
-Best XGB params are: 
-{'colsample_bytree': 1.0, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 3, 'min_child_weight': 3, 'n_estimators': 90, 'reg_alpha': 0.0, 'reg_lambda': 0.5, 'subsample': 1.0}Best result achieved is: 
-0.9171801842166524
-File ../../data/output/test_trans_XGB-CV-True_cu.csv was created!
-File ../../data/output/train_trans_XGB-CV-True_cu.csv was created!
-Runing the analysis for AB ...
-Best PCA params are: 
-{'comp': None, 'kernel': 'poly', 'deg': 6, 'gamma': 0.14, 'coef': 1.75}Best result achieved is: 
-['XGB', 0.8455937476999775]
-Best XGB params are: 
-{'colsample_bytree': 0.8, 'gamma': 0.0, 'learning_rate': 0.08, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 280, 'reg_alpha': 0.0, 'reg_lambda': 2.0, 'subsample': 0.8}Best result achieved is: 
-0.8560616690439363
-File ../../data/output/test_trans_XGB-CV-True_AB.csv was created!
-File ../../data/output/train_trans_XGB-CV-True_AB.csv was created!
-Runing the analysis for e ...
-Best PCA params are: 
-{'comp': None, 'kernel': 'poly', 'deg': 6, 'gamma': 0.015, 'coef': 2}Best result achieved is: 
-['XGB', 0.7884454629582633]
-Best XGB params are: 
-{'colsample_bytree': 1.0, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 3, 'min_child_weight': 5, 'n_estimators': 560, 'reg_alpha': 0.0, 'reg_lambda': 1.0, 'subsample': 1.0}Best result achieved is: 
-0.79995631982374
-File ../../data/output/test_trans_XGB-CV-True_e.csv was created!
-File ../../data/output/train_trans_XGB-CV-True_e.csv was created!
 Runing the analysis for lambda ...
 Best PCA params are: 
 {'comp': None, 'kernel': 'poly', 'deg': 3, 'gamma': 0.07, 'coef': 1.75}Best result achieved is: 
@@ -35,10 +8,3 @@ Best XGB params are:
 0.5226482474604282
 File ../../data/output/test_trans_XGB-CV-True_lambda.csv was created!
 File ../../data/output/train_trans_XGB-CV-True_lambda.csv was created!
-Runing the analysis for e/cu ...
-Best PCA params are: 
-{'comp': None, 'kernel': 'poly', 'deg': 6, 'gamma': 0.015, 'coef': 2}Best result achieved is: 
-['XGB', 0.11635951787968275]
-Best XGB params are: 
-{'colsample_bytree': 1.0, 'gamma': 0.0, 'learning_rate': 0.28, 'max_depth': 7, 'min_child_weight': 7, 'n_estimators': 100, 'reg_alpha': 0.0, 'reg_lambda': 0.7000000000000001, 'subsample': 1.0}Best result achieved is: 
-0.2062691603815629

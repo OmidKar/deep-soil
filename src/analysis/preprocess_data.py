@@ -59,5 +59,6 @@ def standardScaleData(X_train, X_test, y_train):
 def reverseTransformPredictions(preds, sc, logFlag):
     res = sc.inverse_transform(preds)
     if logFlag:
-        return np.exp(res)
+        res[res>0] = np.exp(res[res>0])
+        return res
     return res
